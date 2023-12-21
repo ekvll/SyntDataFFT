@@ -1,16 +1,19 @@
 # SyntDataFFT README
 
 - [Introduction](#introduction)
-- [Terminal](#terminal)
-  - [Run Application Through Python](#run-application-through-python)
+- [Usage](#usage)
+  - [Run SyntDataFFT](#run-syntdatafft)
+    - [Through Terminal](#through-terminal)
+    - [As an Executable file](#as-an-executable-file)
+  - [User-defined parameters](#user-defined-parameters)
+    - [Signal parameters](#signal-parameters)
+    - [Anomaly parameters](#anomaly-parameters)
+  - [Compute fast Fourier transform and plot the result](#compute-fast-fourier-transform-and-plot-the-result)
+- [Build](#build)
   - [Create a Local Python Package](#create-a-local-python-package)
-  - [Create an Executable File](#create-an-executable-file)
-  - [Tests](#tests)
-- [Using the Application](#using-the-application)
-  - [Parameters](#parameters)
-    - [Signal Parameters](#signal-parameters)
-    - [Anomaly Parameters](#anomaly-parameters)
-  - [Compute Fast Fourier Transform and Plot the Result](#compute-fast-fourier-transform-and-plot-the-result)
+  - [Create an Executable File](#create-an-executable-file-1)
+- [Tests](#tests)
+- [Contribute](#contribute)
 
 ## Introduction
 
@@ -18,38 +21,28 @@ SyntDataFFT is a tool designed to generate synthetic raw signals based on user-d
 
 After generating the synthetic raw signal, SyntDataFFT applies a Hamming window to the signal and computes the Numpy fast Fourier transform (FFT) of the windowed signal. The resulting raw signal, windowed signal, and frequency spectrum of the windowed signal are visualized in plots for easy analysis.
 
-## Terminal
+## Usage
 
-### Run application through Python
-To execute the application through Python, open a terminal, navigate to the project root, and run the following command:
+### Run SyntDataFFT
+
+#### Through Terminal
+First, clone the SyntDataFFT repository. Open a terminal and navigate to where you want to locally store the clone, and then run the following command:
+```
+git clone https://github.com/ekvll/SyntDataFFT
+```
+Now, navigate to the project root, typically by:
+```
+cd ./SyntDataFFT
+```
+To run the application through Python, execute:
 ```
 python main.py
 ```
 
-### Create a Local Python Package
+#### As an Executable file
+Download SyntDataFFT as an executable (.exe) file [here](https://nppd.se/syntdatafft/index.html), and double-click on the .exe file.
 
-To build a local Python package for SyntDataFFT, open a terminal, navigate to the project root, and run the following command:
-```
-python setup.py sdist
-```
-
-### Create an Executable File
-
-Build an executable (.exe) file for the application using PyInstaller. Open a terminal, navigate to the project root, and run the following command:
-```
-pyinstaller SyntDataFFT.spec
-```
-
-### Tests
-
-Execute implemented tests using pytest by opening a terminal, navigating to the project root, and running:
-```
-pytest
-```
-
-## Use application
-
-### Parameters
+### User-defined parameters
 
 Upon application start, default values for signal and anomaly parameters are utilized. Customize the parameters according to your requirements.
 
@@ -74,3 +67,63 @@ Feel free to explore and experiment with different parameter settings to generat
 
 ![Alt text](img/syntdatafft.png)
 
+## Build
+
+### Create a Local Python Package
+
+To build a local Python package for SyntDataFFT, open a terminal, navigate to the project root, and run the following command:
+```
+python setup.py sdist
+```
+
+### Create an Executable File
+
+First, make sure you have PyInstaller installed in your environment.
+Through conda, run:
+```
+conda install -c conda-forge pyinstaller
+```
+Through pip, run:
+```
+pip install pyinstaller
+```
+
+Build the executable (.exe) file for SyntDataFFT using PyInstaller. Open a terminal, navigate to the project root, and run the following command:
+```
+pyinstaller SyntDataFFT.spec
+```
+
+## Tests
+
+Execute implemented tests using pytest by opening a terminal, navigating to the project root, and running:
+```
+pytest
+```
+
+## Contribute
+
+To contribute to SyntDataFFT, do the following:
+* __Start an Issue__ - Start an issue stating what you are planning to work on.
+* __Fork the SyntDataFFT repository__ - click the "Fork" button to create a copy of the SyntDataFFT repository on your GitHub account.
+* __Clone your fork__ - On your forked repository, click "Code" and copy the URL. Then, open a terminal and navigate to where you want to store the local copy of the SyntDataFFT repository. In the terminal, run the following:
+```
+git clone <forked-repository-url>
+```
+* __Create a new branch__ - Create a new branch for your contribution:
+```
+git checkout -b <your-branch-name>
+```
+* __Make your changes__
+* __Commit changed__ - Stage changes:
+```
+git add .
+```
+Commit the changes:
+```
+git commit -m "<fix #issue: description of changes>"
+``` 
+* __Push changes to your fork__ - Push your changes to your forked version of the SyntDataFFT GitHub repository:
+```
+git push origin <your-branch-name>
+```
+* __Create pull-request__ - Visit your forked repository on GitHub. Click the "New pull request" button. Write a title and comment (include issue number in the comment) for your pull request. Click "Create pull request" button.
