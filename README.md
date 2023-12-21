@@ -103,27 +103,35 @@ pytest
 ## Contribute
 
 To contribute to SyntDataFFT, do the following:
-* __Start an Issue__ - Start an issue stating what you are planning to work on.
-* __Fork the SyntDataFFT repository__ - click the "Fork" button to create a copy of the SyntDataFFT repository on your GitHub account.
-* __Clone your fork__ - On your forked repository, click "Code" and copy the URL. Then, open a terminal and navigate to where you want to store the local copy of the SyntDataFFT repository. In the terminal, run the following:
+
+### 1. Start an Issue
+Start an issue in the SyntDataFFT reporistory. State what you are planning to work on. Take note of the issue number, as we later on are going to reference to the issue.
+### 2. Fork the SyntDataFFT repository
+Click the "Fork" button to create a copy of the SyntDataFFT repository on your GitHub account.
+### 3. Clone your fork
+On your forked repository, click "Code" and copy the URL. Then, open a terminal and navigate to where you want to store the local copy of the SyntDataFFT repository. In the terminal, run the following:
 ```
 git clone <forked-repository-url>
 ```
-* __Create a new branch__ - Create a new branch for your contribution:
+### 4. Create a new branch
+Create a new branch for your contribution:
 ```
 git checkout -b <your-branch-name>
 ```
-* __Make your changes__
-* __Commit changed__ - Stage changes:
+### 5. Make your changes
+### 6. Commit changed
+Stage changes:
 ```
 git add .
 ```
 Commit the changes:
 ```
-git commit -m "<fix #issue: description of changes>"
+git commit -m "<fix #issue-number: description of changes>"
 ``` 
-* __Push changes to your fork__ - Push your changes to your forked version of the SyntDataFFT GitHub repository:
+### 7. Push changes to your fork
+Push your changes to your forked version of the SyntDataFFT GitHub repository:
 ```
 git push origin <your-branch-name>
 ```
-* __Create pull-request__ - Visit your forked repository on GitHub. Click the "New pull request" button. Write a title and comment (include issue number in the comment) for your pull request. Click "Create pull request" button.
+### 8. Create pull-request
+Visit your forked repository on GitHub. Click the "New pull request" button. Write a title and comment (include issue number in the comment) for your pull request. Click "Create pull request" button.
